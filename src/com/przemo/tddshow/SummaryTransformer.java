@@ -16,4 +16,10 @@ public class SummaryTransformer {
             throw new IllegalArgumentException("Invalid order value: null");
         return "ResultString";
     }
+
+    public int argumentCaptorUseCase(int a) {
+        Integer argument = Integer.valueOf(a *2);
+        System.out.println("Integer argument: " + a);
+        return a;
+    }
 }
