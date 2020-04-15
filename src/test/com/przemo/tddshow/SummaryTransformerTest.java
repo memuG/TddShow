@@ -5,6 +5,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 class SummaryTransformerTest {
 
     private SummaryTransformer target = null;
@@ -20,6 +22,7 @@ class SummaryTransformerTest {
 
     @Test
     public void testTransformSuccess() {
-        target.transform("MyOrder");
+        String result = target.transform("MyOrder");
+        assertNotNull(result);
     }
 }
