@@ -43,5 +43,6 @@ class SummaryTransformerTest {
                 .thenReturn("Mockito returns CustomService.externalResourceQuery result");
         assertEquals("called customService and got: Mockito returns CustomService.externalResourceQuery result",
                       target.callCustomServiceMethod(ID_INT_PARAM));
+        Mockito.verify(mockCustomService).externalResourceQuery(ID_INT_PARAM);
     }
 }
